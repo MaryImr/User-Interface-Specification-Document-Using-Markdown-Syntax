@@ -1,0 +1,89 @@
+/*user interface specification document using markdown syntax*/
+
+# Page Header
+
+## New User Button
+- First thing after the left margin of the header
+- Button color to be Blue
+- Butter shape to be Rectangle
+- **+** sign before New User text on the button
+- Both **+** and text should be white in color
+- Action: Upon clicking the button, open a new user prompt on the right half in the body of the screen
+
+## Hide Disabled User Checkbox
+- Next to the new user button, after a little space
+- Black Text
+- Written as: Hide Disabled User
+- Check Box on the left of the text
+- Check Box: Blue color, with white colored ✓ (tick) symbol inside, shape of box should be square
+- Header background should be a light gray-ish white
+- Action: Hides all users from the user list that do not have the enabled check box checked (enabled != true)
+
+## Save User Button
+- Light blue colored button, same size as new user button 
+- Aligned right so appears at extreme right on the header 
+- Has white text that says 'Save User' (without the quotes)
+- Action: Pressing this saves the new user entered in the new user prompt that appears after pressing the new user button in the header
+- This button stays inactive until the New user prompt is opened by pressing the new user button in the header and all the details are filled
+
+
+# Page Body
+The user list cover's the whole body below the page header until a new user prompt is opened to add a new user. Then the body area divides in half, user list in the left half and new user prompt in the right half.
+When the body divides in half to accommodate the user list and the new user prompt, there is slight whitespace between the two things.
+
+## User List
+- Table to display the list and whitespace below until the end of the screen
+- Table divided into 4 columns
+- Table header column lists name of each column and 2 accompanying symbols (described below)
+- All text and symbols in table header row are white colored
+- The text in the table header in each column is left aligned while the symbols are right aligned
+- All rows of user list table after the header should have white background
+- Table should have all light gray-ish white borders including around each cell
+- The filter symbol in each column header has options to only show some enteries 
+- The solid up and down arrow symbols in each column header list that column either A-Z or Z-A (or ascending order in case of first column). The rest of the columns are subsequently also affected.
+- **First column:** 
+	- Narrowest column, text in column is 'ID' (without the quote marks) 
+	- Symbols are 'solid up arrow head' on the left and 'Solid Filter Icon' on the right 
+	- This column states the id number of each entry in the user list, starting with one and going down in ascending order or as dictated by the other columns
+	- The text color in this column, after the header cell, is black
+	- The text alignment in this column, after the header cell, is right
+- **Second column:**
+	- Wide column, text in column is 'User Name' (without the quote marks) 
+	- Symbols are 'solid up arrow head, solid down arrow head (up arrow head above the down arrow head)' on the left and 'Solid Filter Icon' on the right 
+	- This column states the user name of each entry in the user list, order of the entry according to either alphabetically, or as dictated by the remaining columns
+	- The text color in this column, after the header cell, is black
+	- The text alignment in this column, after the header cell, is left
+- **Third column:**
+	- Widest column, text in column is 'Email' (without the quote marks) 
+	- Symbols are 'solid up arrow head, solid down arrow head (up arrow head above the down arrow head)' on the left and 'Solid Filter Icon' on the right 
+	- This column states the email address of each entry in the user list, order of the entry according to either alphabetically, or as dictated by the remaining columns
+	- The text color in this column, after the header cell, is black
+	- The text alignment in this column, after the header cell, is left
+- **Fourth column:**
+	- Slightly wide column, text in column is 'Enabled' (without the quote marks) 
+	- Symbols are 'solid up arrow head, solid down arrow head (up arrow head above the down arrow head)' on the left and 'Solid Filter Icon' on the right 
+	- This column states the enabling status  of each entry in the user list, order of the entry according to either alphabetically, or as dictated by the remaining columns
+	- The text color in this column, after the header cell, is black
+	- The text alignment in this column, after the header cell, is left 
+	- If enabled was checked wile entering this user, then true is displayed, otherwise false
+	- If Hide Disable User checked in the header, then don't display users with false in the Enabled column
+
+## New User Prompt
+- This opens on the right half of the body when the new user button in the header is pressed
+- Has a heading of 'New User', aligned left, background strip of light gray-ish white color, running from start of New User text to almost the right margin of the body, background strip slightly wider then the New User text
+- Under the heading, five input taking boxes with labels besides them to take user data, all appearing vertically one after another with equal whitespace in between
+- First is '**Username :**' (bold and black text as shown here)
+- Directly below it is '**Display Name :**' (bold and black text as shown here)
+- Directly below it is '**Phone :**' (bold and black text as shown here)
+- Directly below it is '**Email :**' (bold and black text as shown here)
+- Directly below it is '**User Roles :**' (bold and black text as shown here)
+- Last is '**Enabled :**' (bold and black text as shown here)
+- All these labels are left aligned within the space of the prompt, starting directly below the New User heading text
+- Username, Display name, phone and email options have an empty white rectangular box, approximately with slightly more width then the label text, each box has a light gray-ish white border around it. When clicked on, a black cursor appears in each box where the user can then type the required information
+- The user roles label also has a rectangular box in front of it with all the same specifications as above but has a gray colored text in it that is: 'Select user roles' (without the quotes), clicking the box takes this text away and shows a drop down menu box
+- The drop down menu box mentioned above has options of Guest, Admin and SuperAdmin. Guest is at the top, then Admin, then SuperAdmin 
+- All left aligned within the center of the box, black colored text, when cursor put on any option, it's background becomes blue colored and the text becomes white colored
+- Clicking on any of the options in this drop down menu selects that as the role of this new user
+- All these rectangular input taking boxes after the labels are equal in length and start at the same level
+-  Any typed text in the box and the selected role appear as black, left aligned text in the respective rectangular boxes
+- The last label (Enabled) has a small box in front of it, the box has black outline and white background. Clicking this box shows a white tick on a blue background in the box and sets the status of the user as enabled. If not checked, the user's enabled status remains false and is hidden if the hide disabled user checkbox in the header is checked
